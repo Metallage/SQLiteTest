@@ -1,0 +1,23 @@
+﻿<Window x:Class="SQLiteTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SQLiteTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel x:Name="rootPanel" LastChildFill="True">
+        <WrapPanel x:Name="MenuPanel" DockPanel.Dock="Top" Orientation="Horizontal" MinHeight="20px">
+            <Button x:Name="CreateDbButton" VerticalAlignment="Stretch" HorizontalAlignment="Left"  Margin="2" Content="Создать БД" Click="CreateDbButton_Click" />
+            <Button x:Name="ConnectToDb" VerticalAlignment="Stretch" HorizontalAlignment="Left"  Margin="2" Content="Подключиться к БД" Click="ConnectToDb_Click" />
+            <Button x:Name="GetDataButton" VerticalAlignment="Stretch" HorizontalAlignment="Left"  Margin="2" Content="Считать данные" Click="GetDataButton_Click" />
+            <Button VerticalAlignment="Stretch" HorizontalAlignment="Left"  Margin="2" Content="Добавить запись" />
+            <Button VerticalAlignment="Stretch" HorizontalAlignment="Left"  Margin="2" Content="Отчистить БД" />
+            <Button x:Name="ExitButton" VerticalAlignment="Stretch" HorizontalAlignment="Right"  Margin="2" Content="Выход" Click="ExitButton_Click" />
+        </WrapPanel>
+        <TextBlock x:Name="StatusPanel" DockPanel.Dock="Bottom" MinHeight="10px" Text="Соединение с базой данных разорвано">
+            
+        </TextBlock>
+        <Canvas x:Name="MainField"></Canvas>
+    </DockPanel>
+</Window>
