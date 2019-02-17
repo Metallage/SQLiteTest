@@ -18,6 +18,7 @@
         <TextBlock x:Name="StatusPanel" DockPanel.Dock="Bottom" MinHeight="10px" Text="Соединение с базой данных разорвано">
             
         </TextBlock>
-        <Canvas x:Name="MainField"></Canvas>
+        <DataGrid x:Name="MainDataGrid" AutoGenerateColumns="True"/>
+
     </DockPanel>
 </Window>

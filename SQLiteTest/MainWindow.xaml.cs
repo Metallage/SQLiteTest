@@ -65,8 +65,9 @@ namespace SQLiteTest
             if(connectedDb!=null)
             {
                 List<GridBind> catalog = connectedDb.GetAll();
-                dg1.ItemsSource = catalog;
-                MainField.Children.Add(dg1);
+                MainDataGrid.ItemsSource = catalog;
+               // dg1.ItemsSource = catalog;
+               // MainField.Children.Add(dg1);
             }
         }
 
