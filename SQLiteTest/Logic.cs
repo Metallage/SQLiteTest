@@ -95,6 +95,23 @@ namespace SQLiteTest
             return result;
         }
 
+
+        public DataTable GetDT()
+        {
+            DataTable result = new DataTable();
+
+            if (dbConnection.State == ConnectionState.Open)
+            {
+                dbCommand.CommandText = "SELECT author, book FROM Catalog";
+               
+                result.Load(dbCommand.ExecuteReader());
+
+            }
+
+            return result;
+        }
+
+
         public bool AddRecord()
         {
             bool success = false;
