@@ -94,5 +94,32 @@ namespace SQLiteTest
 
             return result;
         }
+
+        public bool AddRecord()
+        {
+            bool success = false;
+            try
+            {
+                dbCommand.CommandText = "BEGIN TRANSACTION";
+                dbCommand.ExecuteNonQuery();
+
+                for(int i=1; i<=10; i++)
+                {
+                    dbCommand.CommandText = $"INSERT INTO Catalog (author, book) VALUES ('test author {i}','test book {i}')";
+                    dbCommand.ExecuteNonQuery();
+                }
+
+                dbCommand.CommandText = "COMMIT TRANSACTION;";
+                dbCommand.ExecuteNonQuery();
+
+                success = true;
+            }
+            catch
+            {
+                success = false;
+            }
+
+            return success;
+        }
     }
 }

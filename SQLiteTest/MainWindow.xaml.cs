@@ -69,5 +69,11 @@ namespace SQLiteTest
                 MainField.Children.Add(dg1);
             }
         }
+
+        private void AddRecordButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (connectedDb.AddRecord())
+                MessageBox.Show("Тестовые записи добавлены");
+        }
     }
 }

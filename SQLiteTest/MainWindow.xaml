@@ -11,7 +11,7 @@
             <Button x:Name="CreateDbButton" VerticalAlignment="Stretch" HorizontalAlignment="Left"  Margin="2" Content="Создать БД" Click="CreateDbButton_Click" />
             <Button x:Name="ConnectToDb" VerticalAlignment="Stretch" HorizontalAlignment="Left"  Margin="2" Content="Подключиться к БД" Click="ConnectToDb_Click" />
             <Button x:Name="GetDataButton" VerticalAlignment="Stretch" HorizontalAlignment="Left"  Margin="2" Content="Считать данные" Click="GetDataButton_Click" />
-            <Button VerticalAlignment="Stretch" HorizontalAlignment="Left"  Margin="2" Content="Добавить запись" />
+            <Button x:Name="AddRecordButton" VerticalAlignment="Stretch" HorizontalAlignment="Left"  Margin="2" Content="Добавить запись" Click="AddRecordButton_Click" />
             <Button VerticalAlignment="Stretch" HorizontalAlignment="Left"  Margin="2" Content="Отчистить БД" />
             <Button x:Name="ExitButton" VerticalAlignment="Stretch" HorizontalAlignment="Right"  Margin="2" Content="Выход" Click="ExitButton_Click" />
         </WrapPanel>
