@@ -13,6 +13,8 @@ namespace SQLiteTest
         private string dbPath;
         private SQLiteConnection dbConnection;
         private SQLiteCommand dbCommand;
+        private SQLiteDataAdapter adapter;
+        private DataSet ds;
 
         public Logic(string dbPath)
         {
@@ -111,6 +113,16 @@ namespace SQLiteTest
             return result;
         }
 
+        public DataTable GetWithDS()
+        {
+            DataTable result = new DataTable();
+            adapter = new SQLiteDataAdapter("SELECT * FROM Catalog ",dbConnection);
+            ds = new DataSet();
+            adapter.FillSchema(ds, SchemaType.Source, "Catalog");
+            adapter.Fill(ds, "Catalog");
+            result = ds.Tables["Catalog"];
+            return result;
+        }
 
         public bool AddRecord()
         {

@@ -66,11 +66,13 @@ namespace SQLiteTest
             {
                 //List<GridBind> catalog = connectedDb.GetAll();
                 //MainDataGrid.ItemsSource = catalog;
-              DataTable dt = connectedDb.GetDT();
+              DataTable dt = connectedDb.GetWithDS();
 
 
-              var dataList = dt.Select();
-                MainDataGrid.ItemsSource = dataList;
+             // var dataList = dt.Select();
+                MainDataGrid.ItemsSource = dt.DefaultView;
+                MainDataGrid.CanUserAddRows = false;
+                MainDataGrid.CanUserDeleteRows = false;
 
                 // dg1.ItemsSource = catalog;
                // MainField.Children.Add(dg1);
